@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.10)
+
+set(CMAKE_CXX_COMPILER "C:/mingw64/bin/g++.exe")
+set(CMAKE_C_COMPILER "C:/mingw64/bin/gcc.exe")
+
+project(MonProjet)
+
+# Spécifiez la version de GLFW que vous utilisez
+set(GLFW_PATH "glfw")  # Remplacez ceci par le chemin vers votre dossier GLFW
+
+# Inclure les fichiers d'en-tête de GLFW
+include_directories(include)
+
+# Définir où CMake peut trouver les bibliothèques GLFW
+link_directories(lib)
+
+find_package(OpenGL REQUIRED)
+
+# Ajouter les sources
+set(SOURCES
+    src/main.cpp
+    src/glad.c
+)
+
+# Créer l'exécutable
+add_executable(MonProjet ${SOURCES})
+
+# Lier GLFW à votre projet
+target_link_libraries(MonProjet glfw3 opengl32)
+
