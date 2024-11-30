@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_COMPILER "C:/mingw64/bin/g++.exe")
 set(CMAKE_C_COMPILER "C:/mingw64/bin/gcc.exe")
 
-project(MonProjet)
+project(${APP_NAME})
 
 # Spécifiez la version de GLFW que vous utilisez
 set(GLFW_PATH "glfw")  # Remplacez ceci par le chemin vers votre dossier GLFW
@@ -23,8 +23,8 @@ set(SOURCES
 )
 
 # Créer l'exécutable
-add_executable(MonProjet ${SOURCES})
+add_executable(${APP_NAME} ${SOURCES})
 
 # Lier GLFW à votre projet
-target_link_libraries(MonProjet glfw3 opengl32)
+target_link_libraries(${APP_NAME} glfw3 opengl32)
 
