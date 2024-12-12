@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.cls": "vb",
+        "*.bas": "vb",
+        "*.frm": "vb",
+        "*.sql": "sql",
+        "CMakelists.txt": "cmake",
+        "iostream": "cpp"
+    }
+}
